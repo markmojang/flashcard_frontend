@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Jua&family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
+body{
+    background-color: #FDF7E4;
+    color: #BBAB8C;
+}
+.Title{
+    display: flex;
+    justify-content: center;
+    font-size: 65px;
+    font-family: 'Jua', sans-serif;
+        }
+.Column{
+    float: left;
+    margin-left: 25px;
+    font-family: 'Jua', sans-serif;
+}
+.input_text{
+    text-align: center;
+    margin-bottom: -10px;
+}
+
+.flashcard-container{
+    font-family: 'Jua', sans-serif;
+    margin: 15px;
+}
+.flashcard-front{
+    float: left;
+}
+.flashcard-back{
+    margin-left: 10%;
+}
+  
+input[type="text"],
+textarea {
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid #ccc; /* Adjust border color */
+  border-radius: 4px;
+  font-size: 16px;
+  font-family: 'Jua', sans-serif;
+}
+
+  
+button {
+    margin: 60px;
+    width: 120px; /* ปรับขนาดให้กว้างขึ้นเล็กน้อย */
+    height: 45px;  /* ปรับขนาดให้สูงขึ้นเล็กน้อย */
+    padding: 10px 20px; /* เพิ่ม padding ให้ดูมีมิติ */
+    border: none; /* ลบขอบ */
+    border-radius: 8px; /* ขอบมน */
+    background-color: #BBAB8C; /* สีฟ้า */
+    color: #ffffff; /* สีตัวอักษร */
+    font-size: 16px; /* ขนาดตัวอักษร */
+    font-weight: bold; /* ตัวหนา */
+    cursor: pointer; /* เปลี่ยน cursor เป็น pointer เมื่อ hover */
+    transition: background-color 0.3s ease; /* เพิ่ม transition ให้ดู smooth */
+  }
+  
+  button:hover {
+    background-color: #c3a15d; /* สีฟ้าเข้มเมื่อ hover */
+  }
+  
+  button:active {
+    transform: translateY(2px); /* กดปุ่มลงเล็กน้อยเมื่อคลิก */
+  }

@@ -10,9 +10,18 @@ body{
     font-size: 65px;
     font-family: 'Jua', sans-serif;
         }
-.Column{
+.Column1{
+    display:flex;
+    justify-content: center;
     float: left;
-    margin-left: 25px;
+    margin-left: 37%;
+    font-family: 'Jua', sans-serif;
+}
+.Column2{
+    display:flex;
+    justify-content: center;
+    float: left;
+    margin-left: 2%;
     font-family: 'Jua', sans-serif;
 }
 .input_text{
@@ -23,14 +32,16 @@ body{
 .flashcard-container{
     font-family: 'Jua', sans-serif;
     margin: 15px;
+    font-size: x-large;
 }
 .flashcard-front{
     float: left;
+    margin-left: 40%;
 }
 .flashcard-back{
-    margin-left: 10%;
+    margin-left: 60%;
 }
-  
+
 input[type="text"],
 textarea {
   padding: 12px 20px;

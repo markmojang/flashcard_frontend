@@ -22,7 +22,7 @@ export default function Home() {
   return (
     <div>
       <h1 className="Title">FlashCard</h1>
-      <div className='Column'>
+      <div className='Column1'>
         <label>
           <h3 className='input_text'>Front</h3> <br/>
           <input
@@ -32,7 +32,7 @@ export default function Home() {
           />
         </label>
       </div>
-      <div className='Column'>
+      <div className='Column2'>
         <label>
         <h3 className='input_text'> Back </h3> <br/>
           <input
@@ -43,10 +43,9 @@ export default function Home() {
         </label>
       </div>
       <button onClick={addflash}>Add</button>
-      <div style={{fontFamily:'Jua'}}>
+      <div style={{fontFamily:'Jua',justifyContent:"center",display:"flex"}}>
         <h1> List </h1>
       </div>
-      <div>
       {flash.map((flashcard) => (
         <div key={flashcard.id} className="flashcard-container">
           <div className="flashcard-front">{flashcard.front}</div>
@@ -54,7 +53,6 @@ export default function Home() {
         </div>
       ))}
 
-      </div>
     </div>
   );
 }

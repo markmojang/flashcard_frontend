@@ -31,15 +31,18 @@ body{
 
 .flashcard-container{
     font-family: 'Jua', sans-serif;
-    margin: 15px;
     font-size: x-large;
+    display: flex;
+    margin-top: -30px;
 }
 .flashcard-front{
-    float: left;
-    margin-left: 40%;
+    width: 15%;
+    margin-left: 35%;
+    word-wrap: break-word;
+
 }
 .flashcard-back{
-    margin-left: 60%;
+    padding-left: 10%;
 }
 
 input[type="text"],

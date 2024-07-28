@@ -46,10 +46,10 @@ export default function Home() {
       <div style={{fontFamily:'Jua',justifyContent:"center",display:"flex"}}>
         <h1> List </h1>
       </div>
-      {flash.map((flashcard) => (
-        <div key={flashcard.id} className="flashcard-container">
-          <div className="flashcard-front">{flashcard.front}</div>
-          <div className="flashcard-back">{flashcard.back}</div>
+      {flash.map((flashcard,index) => (
+        <div key={index} className="flashcard-container">
+          <div className="flashcard-front"><p>{flashcard.front}</p></div>
+          <div className="flashcard-back"><p>{flashcard.back}</p></div>
         </div>
       ))}
 

@@ -29,6 +29,7 @@ body{
     margin-bottom: -10px;
 }
 
+
 .flashcard-container{
     font-family: 'Jua', sans-serif;
     font-size: x-large;
@@ -39,7 +40,6 @@ body{
     width: 15%;
     margin-left: 35%;
     word-wrap: break-word;
-
 }
 .flashcard-back{
     padding-left: 10%;
@@ -47,16 +47,16 @@ body{
 
 input[type="text"],
 textarea {
-  padding: 12px 20px;
-  margin: 8px 0;
-  box-sizing: border-box;
-  border: 2px solid #ccc; /* Adjust border color */
-  border-radius: 4px;
-  font-size: 16px;
-  font-family: 'Jua', sans-serif;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #ccc; /* Adjust border color */
+    border-radius: 4px;
+    font-size: 16px;
+    font-family: 'Jua', sans-serif;
 }
 
-  
+
 button {
     margin: 60px;
     width: 120px; /* ปรับขนาดให้กว้างขึ้นเล็กน้อย */
@@ -72,10 +72,11 @@ button {
     transition: background-color 0.3s ease; /* เพิ่ม transition ให้ดู smooth */
   }
   
-  button:hover {
-    background-color: #c3a15d; /* สีฟ้าเข้มเมื่อ hover */
-  }
-  
-  button:active {
-    transform: translateY(2px); /* กดปุ่มลงเล็กน้อยเมื่อคลิก */
-  }
+button:hover {
+background-color: #c3a15d; /* สีฟ้าเข้มเมื่อ hover */
+}
+
+button:active {
+transform: translateY(2px); /* กดปุ่มลงเล็กน้อยเมื่อคลิก */
+}
+

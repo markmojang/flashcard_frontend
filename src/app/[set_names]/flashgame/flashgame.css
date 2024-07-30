@@ -88,4 +88,9 @@ body {
     background-color: #169275;
 }
   
+.back-bt{
+  font-family: 'Jua',sans-serif;
+  margin: 30px;
+  cursor: pointer;
+}
   

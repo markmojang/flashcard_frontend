@@ -62,8 +62,12 @@ export default function Flashgame() {
     setWord(flashlist[keys[newRandomIndex]]); 
   };
 
+  const backbt = () => {
+    window.history.back();
+  }
   return (
     <div>
+      <h1 className='back-bt' onClick={backbt}> Go Back </h1>
       <div className="Title">
         <h1>FlashCard</h1>
       </div>

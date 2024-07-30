@@ -103,4 +103,8 @@ button:active {
 .delete-bt:active{
     transform: translateY(2px); /* กดปุ่มลงเล็กน้อยเมื่อคลิก */
 }
-
+.back-bt{
+    font-family: 'Jua',sans-serif;
+    margin: 30px;
+    cursor: pointer;
+}

@@ -93,8 +93,13 @@ export default function Home() {
 
     fetchData();
   }
+
+  const backbt = () => {
+    window.history.back();
+  }
   return (
     <div>
+      <h1 className='back-bt' onClick={backbt}> Go Back </h1>
       <h1 className="Title">FlashCard</h1>
       <div className='Column1'>
         <label>

@@ -1,10 +1,13 @@
 'use client';
+import { useParams } from 'next/navigation';
 import './flashgame.css';
 import React, { useState, useEffect } from 'react';
 
-async function getFlashcardData() {
+async function getFlashcardData(setnames) {
   try {
-    const response = await fetch('http://localhost:8000/flash_info');
+    // const params = useParams();
+    // console.log(params.names)
+    const response = await fetch(`http://localhost:8000/flash_info?Set_name=${setnames}&user=${"test_user"}`);
     let data = await response.json();
     data = data.map(flashcard => ({
       front: flashcard.front,
@@ -23,16 +26,16 @@ export default function Flashgame() {
   const [flashlist, setFlashlist] = useState({});
   const [randomkey, setRandomkey] = useState('');
   const [word, setWord] = useState('');
-
+  const params = useParams();
+  
   useEffect(() => {
     async function fetchData() {
-      const data = await getFlashcardData();
+      const data = await getFlashcardData(params.set_names);
       if (data.length > 0) {
         const flashcards = {};
         data.forEach((flashcard, index) => {
           flashcards[data[index].front] = data[index].back;
         });
-        console.log(flashcards);
         setFlashlist(flashcards);
 
         const keys = Object.keys(flashcards); // Get keys only once

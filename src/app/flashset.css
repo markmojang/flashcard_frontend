@@ -27,3 +27,9 @@ img{
     height: 100px;
 }
 
+.edit_bt,
+.setlabel,
+.add_bt{
+  cursor: pointer;
+}
+

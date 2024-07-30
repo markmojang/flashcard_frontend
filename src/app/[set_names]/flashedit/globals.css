@@ -34,11 +34,12 @@ body{
     font-family: 'Jua', sans-serif;
     font-size: x-large;
     display: flex;
+    align-items: center;
     margin-top: -30px;
 }
 .flashcard-front{
     width: 15%;
-    margin-left: 35%;
+    margin-left: 14px;
     word-wrap: break-word;
 }
 .flashcard-back{
@@ -70,13 +71,36 @@ button {
     font-weight: bold; /* ตัวหนา */
     cursor: pointer; /* เปลี่ยน cursor เป็น pointer เมื่อ hover */
     transition: background-color 0.3s ease; /* เพิ่ม transition ให้ดู smooth */
-  }
-  
+}
+
 button:hover {
-background-color: #c3a15d; /* สีฟ้าเข้มเมื่อ hover */
+    background-color: #c3a15d; /* สีฟ้าเข้มเมื่อ hover */
 }
 
 button:active {
-transform: translateY(2px); /* กดปุ่มลงเล็กน้อยเมื่อคลิก */
+    transform: translateY(2px); /* กดปุ่มลงเล็กน้อยเมื่อคลิก */
+}
+
+.delete-bt{
+    margin-left: 35%;
+    display: flex;
+    float: right;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px; /* ขอบมน */
+    width: 30px; /* ปรับขนาดให้กว้างขึ้นเล็กน้อย */
+    height: 30px;  /* ปรับขนาดให้สูงขึ้นเล็กน้อย */
+    background-color: #BBAB8C; /* สีฟ้า */
+    color: #ffffff; /* สีตัวอักษร */
+    font-size: 14px; /* ขนาดตัวอักษร */
+    font-weight: bold; /* ตัวหนา */
+    cursor: pointer; /* เปลี่ยน cursor เป็น pointer เมื่อ hover */
+    transition: background-color 0.3s ease; /* เพิ่ม transition ให้ดู smooth */
+}
+.delete-bt:hover {
+    background-color: #c3a15d; /* สีฟ้าเข้มเมื่อ hover */
+    }
+.delete-bt:active{
+    transform: translateY(2px); /* กดปุ่มลงเล็กน้อยเมื่อคลิก */
 }
 

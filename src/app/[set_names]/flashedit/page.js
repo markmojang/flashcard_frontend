@@ -30,7 +30,7 @@ export default function Home() {
       console.log(parmas.set_names);
       const response = await fetch('https://flashcard-backend-db69fcfacfa6.herokuapp.com/add_flashcard', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 'Content-Type': 'application/json; charset=utf-8' },
         body: JSON.stringify({
           user: "test_user", // Replace with actual user data
           Set_name: params.set_names, // Assuming the set name remains constant

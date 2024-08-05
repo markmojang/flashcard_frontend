@@ -42,7 +42,7 @@ export default function Flashset() {
         console.log(setinp);
         const response = await fetch('https://flashcard-backend-db69fcfacfa6.herokuapp.com/add_flashcard', {
           method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
+          headers: { 'Content-Type': 'application/json; charset=utf-8'  },
           body: JSON.stringify({
             user: "test_user", // Replace with actual user data
             Set_name: setinp, // Assuming the set name remains constant

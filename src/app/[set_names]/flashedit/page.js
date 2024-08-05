@@ -26,6 +26,7 @@ export default function Home() {
 
   const addFlashcard = async () => {
     try {
+      if (front != "" && back != ""){
       const response = await fetch('http://localhost:8000/add_flashcard', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -57,7 +58,12 @@ export default function Home() {
       }
   
       fetchData();
-    } catch (error) {
+    }
+    else{
+      console.error("Data cant be blank")
+    }
+    } 
+    catch (error) {
       console.error('Error adding flashcard:', error);
       // Handle the error
     }

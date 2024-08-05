@@ -32,3 +32,39 @@ img{
   cursor: pointer;
 }
 
+.inputset{
+  box-sizing: border-box;
+  border: 2px solid #ccc; /* Adjust border color */
+  border-radius: 4px;
+  font-size: 16px;
+  width: 100px;
+  font-family: 'Jua', sans-serif;
+}
+
+.delete-bt{
+  display: flex;
+  margin-top: 25px;
+  margin-right: 20px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px; /* ขอบมน */
+  width: 30px; /* ปรับขนาดให้กว้างขึ้นเล็กน้อย */
+  height: 30px;  /* ปรับขนาดให้สูงขึ้นเล็กน้อย */
+  background-color: #BBAB8C; /* สีฟ้า */
+  color: #ffffff; /* สีตัวอักษร */
+  font-size: 14px; /* ขนาดตัวอักษร */
+  font-weight: bold; /* ตัวหนา */
+  cursor: pointer; /* เปลี่ยน cursor เป็น pointer เมื่อ hover */
+  transition: background-color 0.3s ease; /* เพิ่ม transition ให้ดู smooth */
+}
+.delete-bt:hover {
+  background-color: #c3a15d; /* สีฟ้าเข้มเมื่อ hover */
+  }
+.delete-bt:active{
+  transform: translateY(2px); /* กดปุ่มลงเล็กน้อยเมื่อคลิก */
+}
+
+.top-set{ 
+  display: flex;
+  justify-content: center;
+}

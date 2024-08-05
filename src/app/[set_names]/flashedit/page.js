@@ -12,7 +12,7 @@ export default function Home() {
 
   useEffect(() => {
     async function fetchData() {
-      const response = await fetch(`https://flashcard-backend-db69fcfacfa6.herokuapp.com/flash_info?Set_name=${params.set_names}&user=${"test_user"}`);
+      const response = await fetch(`https://flashcard-backend-db69fcfacfa6.herokuapp.com/flash_info?Set_name=${decodeURI(params.set_names)}&user=${"test_user"}`);
       let data = await response.json();
       data = data.map(flashcard => ({
         front: flashcard.front,
@@ -27,13 +27,12 @@ export default function Home() {
   const addFlashcard = async () => {
     if (front != "" && back != ""){
       try {
-      console.log(parmas.set_names);
       const response = await fetch('https://flashcard-backend-db69fcfacfa6.herokuapp.com/add_flashcard', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json; charset=utf-8' },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           user: "test_user", // Replace with actual user data
-          Set_name: params.set_names, // Assuming the set name remains constant
+          Set_name: decodeURI(params.set_names), // Assuming the set name remains constant
           front,
           back
         })
@@ -50,7 +49,7 @@ export default function Home() {
         // Handle the error (e.g., show an error message to the user)
       }
       async function fetchData() {
-        const response = await fetch(`https://flashcard-backend-db69fcfacfa6.herokuapp.com/flash_info?Set_name=${params.set_names}&user=${"test_user"}`);
+        const response = await fetch(`https://flashcard-backend-db69fcfacfa6.herokuapp.com/flash_info?Set_name=${decodeURI(params.set_names)}&user=${"test_user"}`);
         let data = await response.json();
         data = data.map(flashcard => ({
           front: flashcard.front,
@@ -92,7 +91,7 @@ export default function Home() {
       // Handle the error
     }
     async function fetchData() {
-      const response = await fetch(`https://flashcard-backend-db69fcfacfa6.herokuapp.com/flash_info?Set_name=${params.set_names}&user=${"test_user"}`);
+      const response = await fetch(`https://flashcard-backend-db69fcfacfa6.herokuapp.com/flash_info?Set_name=${decodeURI(params.set_names)}&user=${"test_user"}`);
       let data = await response.json();
       data = data.map(flashcard => ({
         front: flashcard.front,
@@ -137,7 +136,7 @@ export default function Home() {
       </div>
       {flash.map((flashcard,index) => (
         <div key={index} className="flashcard-container">
-          <p className='delete-bt' onClick={() => deleteFlash("test_user",params.set_names,flashcard.front,flashcard.back)}> X </p>
+          <p className='delete-bt' onClick={() => deleteFlash("test_user",decodeURI(params.set_names),flashcard.front,flashcard.back)}> X </p>
           <div className="flashcard-front"><p>{flashcard.front}</p></div>
           <div className="flashcard-back"><p>{flashcard.back}</p></div>
         </div>

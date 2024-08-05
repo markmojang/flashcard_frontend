@@ -29,11 +29,12 @@ export default function Flashset() {
     }, []);
 
   const flipgame = (name) =>{
-    window.location.href = `./${name}/flashgame`;
+
+    window.location.href = `./${encodeURI(name)}/flashgame`;
   };
 
   const editflash = (name) =>{
-    window.location.href = `./${name}/flashedit`;
+    window.location.href = `./${encodeURI(name)}/flashedit`;
   };
   
   const addsetname = async () =>{
@@ -42,7 +43,7 @@ export default function Flashset() {
         console.log(setinp);
         const response = await fetch('https://flashcard-backend-db69fcfacfa6.herokuapp.com/add_flashcard', {
           method: 'POST',
-          headers: { 'Content-Type': 'application/json; charset=utf-8'  },
+          headers: { 'Content-Type': 'application/json'  },
           body: JSON.stringify({
             user: "test_user", // Replace with actual user data
             Set_name: setinp, // Assuming the set name remains constant

@@ -27,7 +27,7 @@ export default function Home() {
   const addFlashcard = async () => {
     if (front != "" && back != ""){
       try {
-      
+      console.log(parmas.set_names);
       const response = await fetch('https://flashcard-backend-db69fcfacfa6.herokuapp.com/add_flashcard', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -44,7 +44,8 @@ export default function Home() {
         setFlash([...flash, newFlashcard]); // Add the new flashcard to the list
         setFront('');
         setBack('');
-      } else {
+      } 
+      else {
         console.error('Failed to add flashcard');
         // Handle the error (e.g., show an error message to the user)
       }

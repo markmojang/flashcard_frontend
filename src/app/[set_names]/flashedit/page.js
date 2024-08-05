@@ -25,8 +25,9 @@ export default function Home() {
   }, []);
 
   const addFlashcard = async () => {
-    try {
-      if (front != "" && back != ""){
+    if (front != "" && back != ""){
+      try {
+      
       const response = await fetch('https://flashcard-backend-db69fcfacfa6.herokuapp.com/add_flashcard', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -59,15 +60,17 @@ export default function Home() {
   
       fetchData();
     }
-    else{
-      alert("Data cant be blank");
-    }
-    } 
+     
     catch (error) {
       console.error('Error adding flashcard:', error);
       // Handle the error
     }
+    }
+    else{
+      alert("Data cant be blank");
+    }
   };
+
 
   const deleteFlash = async (Users,setnames,front,back) => {
     try {

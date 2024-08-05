@@ -12,7 +12,7 @@ export default function Home() {
 
   useEffect(() => {
     async function fetchData() {
-      const response = await fetch(`http://localhost:8000/flash_info?Set_name=${params.set_names}&user=${"test_user"}`);
+      const response = await fetch(`https://flashcard-backend-db69fcfacfa6.herokuapp.com/flash_info?Set_name=${params.set_names}&user=${"test_user"}`);
       let data = await response.json();
       data = data.map(flashcard => ({
         front: flashcard.front,
@@ -27,7 +27,7 @@ export default function Home() {
   const addFlashcard = async () => {
     try {
       if (front != "" && back != ""){
-      const response = await fetch('http://localhost:8000/add_flashcard', {
+      const response = await fetch('https://flashcard-backend-db69fcfacfa6.herokuapp.com/add_flashcard', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -48,7 +48,7 @@ export default function Home() {
         // Handle the error (e.g., show an error message to the user)
       }
       async function fetchData() {
-        const response = await fetch(`http://localhost:8000/flash_info?Set_name=${params.set_names}&user=${"test_user"}`);
+        const response = await fetch(`https://flashcard-backend-db69fcfacfa6.herokuapp.com/flash_info?Set_name=${params.set_names}&user=${"test_user"}`);
         let data = await response.json();
         data = data.map(flashcard => ({
           front: flashcard.front,
@@ -71,7 +71,7 @@ export default function Home() {
 
   const deleteFlash = async (Users,setnames,front,back) => {
     try {
-      const response = await fetch(`http://localhost:8000/delete_flashcard?user=${Users}&Set_name=${setnames}&front=${front}&back=${back}`, {
+      const response = await fetch(`https://flashcard-backend-db69fcfacfa6.herokuapp.com/delete_flashcard?user=${Users}&Set_name=${setnames}&front=${front}&back=${back}`, {
         method: 'DELETE',
       });
   
@@ -88,7 +88,7 @@ export default function Home() {
       // Handle the error
     }
     async function fetchData() {
-      const response = await fetch(`http://localhost:8000/flash_info?Set_name=${params.set_names}&user=${"test_user"}`);
+      const response = await fetch(`https://flashcard-backend-db69fcfacfa6.herokuapp.com/flash_info?Set_name=${params.set_names}&user=${"test_user"}`);
       let data = await response.json();
       data = data.map(flashcard => ({
         front: flashcard.front,

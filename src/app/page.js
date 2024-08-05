@@ -5,7 +5,7 @@ import React, { useState, useEffect } from 'react';
 
 
 async function getflashdata() {
-  const res = await fetch(`http://localhost:8000/flash_info?user=${"test_user"}`);
+  const res = await fetch(`https://flashcard-backend-db69fcfacfa6.herokuapp.com/flash_info?user=${"test_user"}`);
   let data = await res.json();
   data = Array.from(new Set(data.map(flashcard => flashcard.Set_name)));
   return data;
@@ -40,7 +40,7 @@ export default function Flashset() {
     if(setinp !== "" && !existingSetNames.includes(setinp)){
       try {
         console.log(setinp);
-        const response = await fetch('http://localhost:8000/add_flashcard', {
+        const response = await fetch('https://flashcard-backend-db69fcfacfa6.herokuapp.com/add_flashcard', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
@@ -72,7 +72,7 @@ export default function Flashset() {
 
   const delete_set = async (Users,setnames) => {
     try {
-      const response = await fetch(`http://localhost:8000/delete_set?user=${Users}&Set_name=${setnames}`, {
+      const response = await fetch(`https://flashcard-backend-db69fcfacfa6.herokuapp.com/delete_set?user=${Users}&Set_name=${setnames}`, {
         method: 'DELETE',
       });
       if (response.ok) {

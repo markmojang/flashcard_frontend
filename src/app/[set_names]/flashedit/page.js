@@ -6,8 +6,8 @@ import { useParams } from 'next/navigation';
 
 export default function Home() {
   const [flash, setFlash] = useState([{}]);
-  const [front, setFront] = useState();
-  const [back, setBack] = useState();
+  const [front, setFront] = useState("");
+  const [back, setBack] = useState("");
   const params = useParams();
 
   useEffect(() => {
@@ -60,7 +60,7 @@ export default function Home() {
       fetchData();
     }
     else{
-      console.error("Data cant be blank")
+      alert("Data cant be blank");
     }
     } 
     catch (error) {

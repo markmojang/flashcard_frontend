@@ -7,7 +7,7 @@ async function getFlashcardData(setnames) {
   try {
     // const params = useParams();
     // console.log(params.names)
-    const response = await fetch(`https://flashcard-backend-db69fcfacfa6.herokuapp.com/flash_info?Set_name=${setnames}&user=${"test_user"}`);
+    const response = await fetch(`http://localhost:8000/flash_info?Set_name=${setnames}&user=${"test_user"}`);
     let data = await response.json();
     data = data.map(flashcard => ({
       front: flashcard.front,
